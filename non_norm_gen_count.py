@@ -2,7 +2,7 @@ from collections import Counter
 import csv
 
 
-def build_sequence(max_digits=5000000, regime="ratio_to_zero", C=2):
+def build_sequence(max_digits=100000000, regime="ratio_to_zero", C=2):
     """
     Build decimal digits of f(x,r(t),N0) up to ~max_digits (excluding '0.')
     x_t = '7', |x| = 1
@@ -58,7 +58,7 @@ def save_to_csv(filename, data):
 
 
 if __name__ == "__main__":
-    maxN = 5000000  # increase if you want more accuracy
+    maxN = 100000000  # increase if you want more accuracy
 
     # Case 1: (r(t)*|x|)/|g(t)| → 0
     seq_zero = build_sequence(max_digits=maxN, regime="ratio_to_zero")
